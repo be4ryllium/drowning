@@ -1,0 +1,91 @@
+/*--------------------------< SETUP >--------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+:root {
+    --header-height: 150px;
+
+    --header-li-width: 175px;
+    --header-li-top-margin: 35px;
+    --header-li-right-margin: 25px;
+
+    --li-background-gradient: #e3f7f4;
+}
+
+body {
+    font-family: 'Roboto Slab', 'Times New Roman', Times, serif;
+}
+
+/*----------------------< HEADER STUFFS >-----------------------*/
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background-image: radial-gradient(ellipse at top left, #52e2f5a9, #3597e769);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+}
+
+#header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+#header ul li {
+    margin-top: var(--header-li-top-margin);
+    margin-right: var(--header-li-right-margin);
+}
+
+#header ul li a div {
+    width: var(--header-li-width);
+    height: calc(var(--header-height) - var(--header-li-top-margin) * 2);
+    background-color: white;
+    text-decoration: none;
+
+    text-align: center;
+    padding-top: calc((var(--header-height) - var(--header-li-top-margin) * 2) / 3.1);
+    box-sizing: border-box;
+    user-select: none;
+    font-size: 20px;
+
+    border-left: 5px #64c0fd solid;
+    border-right: 5px #64c0fd solid;
+    background-image: linear-gradient(to top, var(--li-background-gradient), #ffffff);
+}
+
+#header ul li:first-child a div {
+    border-left: none !important;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-image: radial-gradient(ellipse at bottom right, var(--li-background-gradient), #ffffff);
+}
+#header ul li:last-child a div {
+    border-right: none !important;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background-image: radial-gradient(ellipse at bottom left, var(--li-background-gradient), #ffffff);
+}
+
+#ff {
+    width: 100%;
+    height: 100%;
+    display: none;
+    opacity: 0;
+    transition: ease-out 6s;
+    transition-property: transform opacity;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+
+#content {
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    padding-left: 25px;
+}
