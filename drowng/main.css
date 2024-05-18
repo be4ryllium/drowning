@@ -1,17 +1,19 @@
 /*--------------------------< SETUP >--------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
-:root {
-    --header-height: 150px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
 
-    --header-li-width: 175px;
-    --header-li-top-margin: 35px;
-    --header-li-right-margin: 25px;
+:root {
+    --header-height: 100px;
+
+    --header-li-width: 135px;
+    --header-li-top-margin: 20px;
+    --header-li-right-margin: 15px;
 
     --li-background-gradient: #e3f7f4;
 }
 
 body {
-    font-family: 'Roboto Slab', 'Times New Roman', Times, serif;
+    font-family: 'Ubuntu Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 /*----------------------< HEADER STUFFS >-----------------------*/
@@ -22,9 +24,11 @@ body {
     left: 0;
     width: 100%;
     height: var(--header-height);
-    background-image: radial-gradient(ellipse at top left, #52e2f5a9, #3597e769);
+    background-image: radial-gradient(ellipse at top left, #2456b9a9, #3c569d69);
     backdrop-filter: blur(5px);
     z-index: 100;
+
+    font-family: 'Roboto Condensed', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 #header ul {
@@ -40,7 +44,9 @@ body {
 }
 
 #header ul li a div {
-    width: var(--header-li-width);
+    min-width: var(--header-li-width);
+    padding-left: 20px;
+    padding-right: 20px;
     height: calc(var(--header-height) - var(--header-li-top-margin) * 2);
     background-color: white;
     text-decoration: none;
@@ -51,8 +57,8 @@ body {
     user-select: none;
     font-size: 20px;
 
-    border-left: 5px #64c0fd solid;
-    border-right: 5px #64c0fd solid;
+    border-left: 5px #4756c6 solid;
+    border-right: 5px #4756c6 solid;
     background-image: linear-gradient(to top, var(--li-background-gradient), #ffffff);
 }
 
@@ -88,4 +94,9 @@ body {
     top: var(--header-height);
     left: 0;
     padding-left: 25px;
+}
+
+#content h1 {
+    font-weight: 500;
+    text-align: center;
 }
