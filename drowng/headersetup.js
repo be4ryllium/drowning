@@ -1,14 +1,14 @@
 document.body.innerHTML +=
 '<div id="header"><ul>' +
 
-'<li><a><div>HOME</div></a></li>'+
-'<li><a><div>FACTS</div></a></li>'+
-'<li><a><div>CONSEQUENCES</div></a></li>'+
-'<li><a><div>PREVENTION</div></a></li>'+
-'<li><a><div>SAFEGUARD</div></a></li>'+
-'<li><a><div>CONTACT</div></a></li>'+
-'<li><a><div>ADVOCATE</div></a></li>'+
-'<li><a><div>REFERENCES</div></a></li>'+
+'<li><a href="index.html"><div>HOME</div></a></li>'+
+'<li><a href="facts.html"><div>FACTS</div></a></li>'+
+'<li><a href="consequences.html"><div>CONSEQUENCES</div></a></li>'+
+'<li><a href="prevention.html"><div>PREVENTION</div></a></li>'+
+'<li><a href="safeguard.html"><div>SAFEGUARD</div></a></li>'+
+'<li><a href="contact.html"><div>CONTACT</div></a></li>'+
+'<li><a href="advocate.html"><div>ADVOCATE</div></a></li>'+
+'<li><a href="references.html"><div>REFERENCES</div></a></li>'+
 
 '</ul></div>'
 

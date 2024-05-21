@@ -15,7 +15,7 @@
 
 body {
     font-family: 'Lato', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #f7fafc;
+    background-color: #269bfa;
 }
 
 /*----------------------< HEADER STUFFS >-----------------------*/
@@ -51,6 +51,11 @@ body {
     margin-right: 0;
 }
 
+#header ul a {
+    color: black;
+    text-decoration: none;
+}
+
 #header ul li a div {
     min-width: var(--header-li-width);
     padding-left: 20px;
@@ -70,6 +75,13 @@ body {
     background-image: linear-gradient(to top, var(--li-background-gradient), #ffffff);
 
     box-shadow: 0px 3px 3px #00000048;
+    
+    transition: 0.1s ease;
+    transition-property: margin-top, box-shadow;
+}
+#header ul li a div:hover {
+    margin-top: -3px;
+    box-shadow: 0px 5px 6px #0000002c;
 }
 
 #header ul li:first-child a div {
@@ -85,6 +97,9 @@ body {
     background-image: radial-gradient(ellipse at bottom left, var(--li-background-gradient), #ffffff);
 }
 
+
+/*-------------------------< OTHER STUFFS >--------------------------*/
+
 #ff {
     width: 100%;
     height: 100%;
@@ -96,7 +111,6 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-
 }
 
 #content {
@@ -104,15 +118,69 @@ body {
     top: var(--header-height);
     left: 0;
     width: 100%;
-    height: calc(100% - var(--header-height))
+    height: calc(100% - var(--header-height));
 }
 
-#content h1 {
-    font-weight: 500;
+#main {
     position: absolute;
-    top: 10px;
-    left: 0;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    box-shadow: 0px 5px 8px #000000c0;
+    width: 1000px;
+    height: 500px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#main .header h1 {
+    font-weight: 500;
     width: 100%;
     text-align: center;
     font-size: 50px;
+    margin: auto;
+}
+
+#main p {
+    font-size: 20px;
+}
+
+#main .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% );
+    height: 100px;
+    background-image: radial-gradient(circle at top left, #bcdbff, #b8ebff);
+    z-index: -100;
+    align-content: center;
+}
+#main .content {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: calc(100% - 100px);
+    height: fit-content;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#background {
+    z-index: -100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+#gradient {
+    z-index: -99;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, #ffffff00, #269bfa);
 }
