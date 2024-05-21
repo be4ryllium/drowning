@@ -174,12 +174,15 @@ body {
     padding-right: 50px;
 }
 
-#background {
+.background {
     z-index: -100;
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
+}
+#lowquality_background {
+    z-index: -101;
 }
 
 #gradient {
